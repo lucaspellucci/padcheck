@@ -136,6 +136,7 @@ func testCipher(hostname, serverName string, cipherId, protocolVersion uint16) (
 			CipherSuites:       []uint16{cipherId},
 			MinVersion:         protocolVersion,
 			MaxVersion:         protocolVersion,
+			NextProtos:         []string{"h2"},
 		})
 
 		if connErr != nil {
